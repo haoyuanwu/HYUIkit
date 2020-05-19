@@ -1,0 +1,11 @@
+framework module HYUIkit {
+  umbrella header "HYUIkit.h"
+
+  export *
+  module * { export * }
+}
+
+module HYUIkit.Swift {
+    header "HYUIkit-Swift.h"
+    requires objc
+}

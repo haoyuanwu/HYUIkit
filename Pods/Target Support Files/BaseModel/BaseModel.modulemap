@@ -1,0 +1,6 @@
+framework module BaseModel {
+  umbrella header "BaseModel-umbrella.h"
+
+  export *
+  module * { export * }
+}
