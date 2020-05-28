@@ -15,14 +15,10 @@ PODS:
   - AFNetworking/UIKit (3.0.4):
     - AFNetworking/NSURLSession
   - BaseModel (2.6.4)
+  - GTMBase64 (1.0.1)
   - IQKeyboardManager (6.5.4)
   - Masonry (1.1.0)
   - MJRefresh (3.3.1)
-  - RealReachability (1.3.0):
-    - RealReachability/Connection (= 1.3.0)
-    - RealReachability/Ping (= 1.3.0)
-  - RealReachability/Connection (1.3.0)
-  - RealReachability/Ping (1.3.0)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
@@ -31,11 +27,11 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
-  - BaseModel (~> 2.6.4)
+  - BaseModel
+  - GTMBase64 (~> 1.0.0)
   - IQKeyboardManager
   - Masonry
   - MJRefresh
-  - RealReachability
   - SDWebImage
   - SVProgressHUD
   - ZipArchive (~> 1.4.0)
@@ -44,10 +40,10 @@ SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - BaseModel
+    - GTMBase64
     - IQKeyboardManager
     - Masonry
     - MJRefresh
-    - RealReachability
     - SDWebImage
     - SVProgressHUD
     - ZipArchive
@@ -55,14 +51,14 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
   BaseModel: 4b7bcf868a0760e9631bb79330233e3c43c4aa85
+  GTMBase64: f0f91be06a7a20b84c8e4fee30c0430395091d82
   IQKeyboardManager: 72b359cd7e777e3a984cedbe05f8da45320cbb63
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJRefresh: eeda70fbf0ad277f3178cef1cd0c3532591d6237
-  RealReachability: eae9c58d2db52fadd8e1cba4b5d4c028454fbc47
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   ZipArchive: e25a4373192673e3229ac8d6e9f64a3e5713c966
 
-PODFILE CHECKSUM: 2d848acb1e9ccdf27f905d5c95c220523c6d8fe1
+PODFILE CHECKSUM: 8cfd141f8dd43d9738f2b658787066380ac75b18
 
 COCOAPODS: 1.8.4

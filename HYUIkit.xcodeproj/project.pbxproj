@@ -10,7 +10,6 @@
 		2BC7D2C61C0BF67F004ADBF7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC7D2C51C0BF67F004ADBF7 /* CoreLocation.framework */; };
 		2BC7D2C91C0BF738004ADBF7 /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC7D2C71C0BF738004ADBF7 /* libmp3lame.a */; };
 		2BC7D2CA1C0BF738004ADBF7 /* lame.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BC7D2C81C0BF738004ADBF7 /* lame.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5002FA74231916A20000CFF7 /* HYUIkit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 5002FA73231916A20000CFF7 /* HYUIkit.podspec */; };
 		5009320220CF7665007F0D0C /* HYTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 5009320020CF7665007F0D0C /* HYTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5009320320CF7665007F0D0C /* HYTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 5009320120CF7665007F0D0C /* HYTools.m */; };
 		5015D0B2210EA668000FABDA /* HYLoadHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 5015D0B0210EA668000FABDA /* HYLoadHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -84,7 +83,6 @@
 		2BC7D2C51C0BF67F004ADBF7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		2BC7D2C71C0BF738004ADBF7 /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmp3lame.a; path = ../libmp3lame.a; sourceTree = "<group>"; };
 		2BC7D2C81C0BF738004ADBF7 /* lame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lame.h; path = ../lame.h; sourceTree = "<group>"; };
-		5002FA73231916A20000CFF7 /* HYUIkit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = HYUIkit.podspec; path = ../../HYUIkit.podspec; sourceTree = "<group>"; };
 		5009320020CF7665007F0D0C /* HYTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HYTools.h; path = HYUIkit/baseTool/HYTools.h; sourceTree = SOURCE_ROOT; };
 		5009320120CF7665007F0D0C /* HYTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HYTools.m; path = HYUIkit/baseTool/HYTools.m; sourceTree = SOURCE_ROOT; };
 		5015D0B0210EA668000FABDA /* HYLoadHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYLoadHUD.h; sourceTree = "<group>"; };
@@ -345,7 +343,6 @@
 			children = (
 				508923432451679700321324 /* image.bundle */,
 				50C1D07723AB54DE00D99CB8 /* Framwork */,
-				5002FA73231916A20000CFF7 /* HYUIkit.podspec */,
 				565E92951BDF9D44004C7061 /* HYUIkit.h */,
 				50FDE7E41DA0E34E003E0AD5 /* PrefixHeader.pch */,
 				50C1D07E23AB6BBC00D99CB8 /* Header.h */,
@@ -475,7 +472,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5002FA74231916A20000CFF7 /* HYUIkit.podspec in Resources */,
 				508923442451679700321324 /* image.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -691,7 +687,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
-				GCC_PREFIX_HEADER = /Users/wuhaoyuan/localObject/HYUIkit/HYUIkit/HYUIkit/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/wuhaoyuan/Documents/GitHub/HYUIkit/HYUIkit/PrefixHeader.pch;
 				INFOPLIST_FILE = HYUIkit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -730,7 +726,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
-				GCC_PREFIX_HEADER = /Users/wuhaoyuan/localObject/HYUIkit/HYUIkit/HYUIkit/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/wuhaoyuan/Documents/GitHub/HYUIkit/HYUIkit/PrefixHeader.pch;
 				INFOPLIST_FILE = HYUIkit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
