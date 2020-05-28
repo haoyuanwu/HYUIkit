@@ -9,6 +9,8 @@
 #import "HYQRViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import "QRView.h"
+#import "HYTools.h"
+#import <SVProgressHUD/SVProgressHUD.h>
 
 @interface HYQRViewController () <UITabBarDelegate,AVCaptureMetadataOutputObjectsDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 
@@ -29,6 +31,7 @@
     [super viewDidLoad];
     
     self.title = @"二维码";
+    self.view.backgroundColor = UIColor.blackColor;
     // 开始扫描二维码
     [self startScan];
     
@@ -126,6 +129,15 @@
 
 - (void)startScan
 {
+
+    NSString *mediaType = AVMediaTypeVideo;//读取媒体类型
+    AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:mediaType];//读取设备授权状态
+    if(authStatus == AVAuthorizationStatusRestricted || authStatus == AVAuthorizationStatusDenied){
+        if (self.deleagte && [self.deleagte respondsToSelector:@selector(HYQRViewController:errMessage:status:)] ) {
+            [self.deleagte HYQRViewController:self errMessage:@"未相册允许权限" status:authStatus];
+        }
+        return;
+    }
     // 1.判断输入能否添加到会话中
     if (![self.session canAddInput:self.input]) return;
     [self.session addInput:self.input];

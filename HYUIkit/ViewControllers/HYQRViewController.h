@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
+@class HYQRViewController;
+
+@protocol HYQRViewControllerDelegate <NSObject>
+
+- (void)HYQRViewController:(HYQRViewController *)QRViewController errMessage:(NSString *)errMessage status:(AVAuthorizationStatus)status;
+
+@end
 /**
  *  扫描二维码
  */
@@ -15,4 +23,7 @@
 
 @property(nonatomic, strong)void(^block)(NSString *info);
 @property (nonatomic,strong) NSString *message;
+
+@property (strong, nonatomic) id<HYQRViewControllerDelegate> deleagte;
+
 @end
