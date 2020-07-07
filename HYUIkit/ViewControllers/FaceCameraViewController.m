@@ -8,10 +8,10 @@
 
 #import "FaceCameraViewController.h"
 #import <AVFoundation/AVFoundation.h>
-//#import "HYLoadHUD.h"
-//#import "HYTools.h"
-//#import "UIImage+details.h"
-#import <HYUIkit/HYUIkit.h>
+#import "HYLoadHUD.h"
+#import "HYTools.h"
+#import "UIImage+details.h"
+//#import <HYUIkit/HYUIkit.h>
 #import "CameraDetailsView.h"
 
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
@@ -65,7 +65,10 @@
     
     // 开始扫描二维码
     [self startScan];
-    self.imageSize = 0;
+    if (self.imageSize <= 0 ) {
+        self.imageSize = 0;
+    }
+
     if (self.maskCropRect.size.width == 0 || self.maskCropRect.size.height == 0) {
         self.maskCropRect = UIScreen.mainScreen.bounds;
     }
@@ -533,10 +536,8 @@ API_AVAILABLE(ios(10.0)){
             NSData *jpegData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageDataSampleBuffer];
             
             dispatch_async(dispatch_get_global_queue(0, 0), ^{
-                NSData *data = jpegData;
-                if (self.imageSize != 0) {
-                    data = [UIImage resetSizeOfImageData:[UIImage fixOrientation:[UIImage imageWithData:jpegData]] maxSize:self.imageSize];
-                }
+                __block NSData *data = jpegData;
+                
                 dispatch_async(dispatch_get_main_queue(), ^{
                     UIImage *image = [UIImage imageWithData:data];
                     self.dateilsView.imageView.image = image;
@@ -567,10 +568,17 @@ API_AVAILABLE(ios(10.0)){
 //                                newImage = [sendImag imageFromImageinRect:self.maskCropRect];
                                 newImage = self.disposeImageBlock(self.dateilsView,self.maskCropRect);
 
-                                NSData *newData = UIImageJPEGRepresentation(newImage, 1);
                                 self.dateilsView.imageView.image = newImage;
-                                self.facepPicBlock(newImage,newData);
+                                if (self.imageSize != 0) {
+                                    data = [UIImage compressImageQuality:[UIImage fixOrientation:[UIImage imageWithData:jpegData]] toByte:self.imageSize];
+                                }else{
+                                    data = UIImageJPEGRepresentation(newImage, 1);
+                                }
+                                self.facepPicBlock(newImage,data);
                             }else{
+                                if (self.imageSize != 0) {
+                                    data = [UIImage compressImageQuality:[UIImage fixOrientation:[UIImage imageWithData:jpegData]] toByte:self.imageSize];
+                                }
                                 self.facepPicBlock(newImage,data);
                             }
                         }
@@ -597,10 +605,6 @@ API_AVAILABLE(ios(10.0)){
     self.dateilsView.imageView.image = image;
     
     NSData *data = jpegData;
-    // 判断要不要压缩
-    if (self.imageSize != 0) {
-        data = [UIImage resetSizeOfImageData:[UIImage fixOrientation:[UIImage imageWithData:jpegData]] maxSize:self.imageSize];
-    }
     
     if (self.isEdit) {
         self.dateilsView.alpha = 1;
@@ -629,9 +633,19 @@ API_AVAILABLE(ios(10.0)){
 //                newImage = [sendImag imageFromImageinRect:self.maskcCropRect];
                 
                 newImage = self.disposeImageBlock(self.dateilsView,self.maskCropRect);
-                NSData *newData = UIImageJPEGRepresentation(newImage, 1);
-                self.facepPicBlock(newImage,newData);
+                
+                // 判断要不要压缩
+                if (self.imageSize != 0) {
+                    data = [UIImage compressImageQuality:[UIImage fixOrientation:[UIImage imageWithData:jpegData]] toByte:self.imageSize];
+                }else{
+                    data = UIImageJPEGRepresentation(newImage, 1);
+                }
+                self.facepPicBlock(newImage,data);
             }else{
+                // 判断要不要压缩
+                if (self.imageSize != 0) {
+                    data = [UIImage compressImageQuality:[UIImage fixOrientation:[UIImage imageWithData:jpegData]] toByte:self.imageSize];
+                }
                 self.facepPicBlock(newImage,data);
             }
         }

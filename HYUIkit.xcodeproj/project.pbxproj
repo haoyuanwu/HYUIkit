@@ -65,8 +65,6 @@
 		50B64C162418DB8800EB3459 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B64C152418DB8800EB3459 /* AssetsLibrary.framework */; };
 		50B64C182418DB9300EB3459 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B64C172418DB9300EB3459 /* AVFoundation.framework */; };
 		50B64C1A2418DB9E00EB3459 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B64C192418DB9E00EB3459 /* CoreImage.framework */; };
-		50C1D07C23AB6B5600D99CB8 /* BaseRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C1D07A23AB6B5500D99CB8 /* BaseRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		50C1D07D23AB6B5600D99CB8 /* BaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C1D07B23AB6B5600D99CB8 /* BaseRequest.m */; };
 		50C1D08623AB6CD300D99CB8 /* ViewControllerAnimatedFloatPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C1D08223AB6CD300D99CB8 /* ViewControllerAnimatedFloatPoint.swift */; };
 		50C1D08723AB6CD300D99CB8 /* PopAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C1D08323AB6CD300D99CB8 /* PopAnimation.swift */; };
 		50C1D08823AB6CD300D99CB8 /* PushAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C1D08423AB6CD300D99CB8 /* PushAnimation.swift */; };
@@ -138,8 +136,6 @@
 		50B64C152418DB8800EB3459 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		50B64C172418DB9300EB3459 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		50B64C192418DB9E00EB3459 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
-		50C1D07A23AB6B5500D99CB8 /* BaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseRequest.h; sourceTree = "<group>"; };
-		50C1D07B23AB6B5600D99CB8 /* BaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseRequest.m; sourceTree = "<group>"; };
 		50C1D07E23AB6BBC00D99CB8 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		50C1D08223AB6CD300D99CB8 /* ViewControllerAnimatedFloatPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerAnimatedFloatPoint.swift; sourceTree = "<group>"; };
 		50C1D08323AB6CD300D99CB8 /* PopAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopAnimation.swift; sourceTree = "<group>"; };
@@ -237,8 +233,6 @@
 		501EA1AF1CE41B440099828B /* baseTool */ = {
 			isa = PBXGroup;
 			children = (
-				50C1D07A23AB6B5500D99CB8 /* BaseRequest.h */,
-				50C1D07B23AB6B5600D99CB8 /* BaseRequest.m */,
 				5015D0B0210EA668000FABDA /* HYLoadHUD.h */,
 				5015D0B1210EA668000FABDA /* HYLoadHUD.m */,
 				501EA1B01CE41B440099828B /* HYBaseViewController.h */,
@@ -399,7 +393,6 @@
 				503426F51F8DF0C800BF045C /* PieView.h in Headers */,
 				504A318E1DF156F100E4A28E /* UIColor+Value.h in Headers */,
 				5015D0B2210EA668000FABDA /* HYLoadHUD.h in Headers */,
-				50C1D07C23AB6B5600D99CB8 /* BaseRequest.h in Headers */,
 				5009320220CF7665007F0D0C /* HYTools.h in Headers */,
 				502E3425219D9AD500504E23 /* HYQRViewController.h in Headers */,
 				509B29DB2459694300B68448 /* FaceCameraViewController.h in Headers */,
@@ -541,7 +534,6 @@
 				50A5F3001D2F864900BCEB7C /* UIView+Common.m in Sources */,
 				501EA1A61CE41AE20099828B /* CLLocation+CH.m in Sources */,
 				50C1D08923AB6CD300D99CB8 /* FloatPointView.swift in Sources */,
-				50C1D07D23AB6B5600D99CB8 /* BaseRequest.m in Sources */,
 				501EA1A41CE41AE20099828B /* GuidePageView.m in Sources */,
 				501EA1C91CE41BD00099828B /* HYVideoRecording.m in Sources */,
 				5033B1C71F944ECE008BB7F5 /* NSString+Code.m in Sources */,

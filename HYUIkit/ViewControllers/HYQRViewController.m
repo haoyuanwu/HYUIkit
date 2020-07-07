@@ -9,8 +9,7 @@
 #import "HYQRViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import "QRView.h"
-#import "HYTools.h"
-#import <SVProgressHUD/SVProgressHUD.h>
+
 
 @interface HYQRViewController () <UITabBarDelegate,AVCaptureMetadataOutputObjectsDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 

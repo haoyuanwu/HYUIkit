@@ -100,8 +100,9 @@
 //        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 //
 //        });
+        __weak typeof (self)wself = self;
         timer = [NSTimer scheduledTimerWithTimeInterval:4 repeats:YES block:^(NSTimer * _Nonnull timer) {
-            [self lineMobile];
+            [wself lineMobile];
         }];
         [timer fire];
         
@@ -133,10 +134,10 @@
 
 - (void)lineMobile{
     [UIView animateWithDuration:2 animations:^{
-        lineImg.transform = CGAffineTransformMakeTranslation(0, rect.size.height-10);
+        self->lineImg.transform = CGAffineTransformMakeTranslation(0, rect.size.height-10);
     } completion:^(BOOL finished) {
         [UIView animateWithDuration:2 animations:^{
-            lineImg.transform = CGAffineTransformIdentity;
+            self->lineImg.transform = CGAffineTransformIdentity;
         } completion:^(BOOL finished) {
 //            if (!self.isStop) {
 //                [self lineMobile];
