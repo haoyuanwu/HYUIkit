@@ -27,7 +27,7 @@
                 }
             }else{
                 CGRect rect = nextAtt.frame;
-                rect = CGRectMake(0, rect.origin.y, rect.size.width, rect.size.height);
+                rect = CGRectMake(self.sectionInset.left, rect.origin.y, rect.size.width, rect.size.height);
                 nextAtt.frame = rect;
             }
         }
